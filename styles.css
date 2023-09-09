@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap');
+
+
+:root {
+  --Light_Cyan: hsl(193, 38%, 86%);
+  --Neon_Green: hsl(150, 100%, 66%);
+
+  --Grayish_Blue: hsl(217, 19%, 38%);
+  --Dark_Grayish_Blue: hsl(217, 19%, 24%);
+  --Dark_Blue: hsl(218, 23%, 16%);
+
+  --Manrope: 'Manrope', sans-serif;
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+/* https://api.adviceslip.com/advice */
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--Dark_Blue);
+  height: 100dvh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  font-family: var(--Manrope);
+  font-weight: 400;
+}
+
+.container {
+  background-color: var(--Dark_Grayish_Blue);
+  width: 470px;
+  height: 280px;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.advice_id {
+  color: var(--Neon_Green);
+  font-size: 16px;
+  padding-top: 10px;
+  padding-bottom: 13px;
+}
+
+.advice_content {
+  color: var(--Light_Cyan);
+  width: 395px;
+  line-height: 1.1;
+  margin: 0 auto;
+  font-size: 25px;
+  padding-bottom: 30px;
+}
+.desktop {
+  position: absolute;
+  bottom: 50px;
+  transform: translate(-50%);
+  left: 50%;
+  width: 410px;
+}
+.mobile {
+  position: absolute;
+  bottom: 50px;
+  transform: translate(-50%);
+  left: 50%;
+  display: none;
+  /* width: 410px; */
+}
+.btn {
+  background-color: var(--Neon_Green);
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -20px;
+  transform: translate(-50%);
+  left: 50%;
+  cursor: pointer;
+  transition: box-shadow .25s;
+}
+.btn:hover  {
+    box-shadow: 0 0 15px var(--Neon_Green);
+}
+
+.dice_btn {
+  width: 18px;
+}
