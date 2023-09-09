@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap");
 
 :root {
   --Light_Cyan: hsl(193, 38%, 86%);
@@ -9,15 +8,13 @@
   --Dark_Grayish_Blue: hsl(217, 19%, 24%);
   --Dark_Blue: hsl(218, 23%, 16%);
 
-  --Manrope: 'Manrope', sans-serif;
+  --Manrope: "Manrope", sans-serif;
 }
 
 html {
   font-size: 100%;
   box-sizing: border-box;
 }
-
-/* https://api.adviceslip.com/advice */
 
 *,
 *::before,
@@ -51,7 +48,7 @@ body {
   color: var(--Neon_Green);
   font-size: 16px;
   padding-top: 10px;
-  padding-bottom: 13px;
+  padding-bottom: 8px;
 }
 
 .advice_content {
@@ -64,7 +61,7 @@ body {
 }
 .desktop {
   position: absolute;
-  bottom: 50px;
+  bottom: 40px;
   transform: translate(-50%);
   left: 50%;
   width: 410px;
@@ -89,12 +86,45 @@ body {
   transform: translate(-50%);
   left: 50%;
   cursor: pointer;
-  transition: box-shadow .25s;
+  transition: box-shadow 0.25s;
 }
-.btn:hover  {
-    box-shadow: 0 0 15px var(--Neon_Green);
+.btn:hover {
+  box-shadow: 0 0 15px var(--Neon_Green);
 }
 
 .dice_btn {
   width: 18px;
+}
+
+@media only screen and (max-width: 530px) {
+  .container {
+    width: 75%;
+    height: 280px;
+  }
+
+  .advice_content {
+    width: 95%;
+    font-size: 21px;
+  }
+
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    width: 80%;
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .container {
+    width: 300px;
+    padding: 12px 13px;
+    height: 280px;
+  }
+
+  .advice_content {
+    width: 95%;
+    font-size: 19px;
+  }
 }
